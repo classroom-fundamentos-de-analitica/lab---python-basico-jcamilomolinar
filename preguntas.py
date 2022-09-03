@@ -99,10 +99,10 @@ def pregunta_07():
     res = {}
 
     for fila in arc:
-        if fila[1] not in res: 
-            res[fila[1]] = [fila[0]]
+        if int(fila[1]) not in res: 
+            res[int(fila[1])] = [fila[0]]
         else: 
-            res[fila[1]] += [fila[0]]
+            res[int(fila[1])] += [fila[0]]
 
     resOrd = sorted(res.items(), key=lambda x: x[0])
     return resOrd
@@ -112,11 +112,11 @@ def pregunta_08():
     res = {}
 
     for fila in arc:
-        if fila[1] not in res:
-            res[fila[1]] = [fila[0]]
+        if int(fila[1]) not in res:
+            res[int(fila[1])] = [fila[0]]
         else:
-            if fila[0] not in res[fila[1]]: 
-                res[fila[1]] += [fila[0]]
+            if fila[0] not in res[int(fila[1])]: 
+                res[int(fila[1])] += [fila[0]]
 
     resOrd = sorted(res.items(), key=lambda x: x[0])
     for item in resOrd: 
@@ -135,9 +135,10 @@ def pregunta_09():
             else: 
                 res[val[0]] += 1
 
-    resOrd = sorted(res.items(), key=lambda x: x[0])
+    resOrd = dict(sorted(res.items()))
     return resOrd
 
+print(pregunta_09())
 
 def pregunta_10():
     res = []
