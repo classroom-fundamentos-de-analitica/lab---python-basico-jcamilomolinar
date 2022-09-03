@@ -138,8 +138,6 @@ def pregunta_09():
     resOrd = dict(sorted(res.items()))
     return resOrd
 
-print(pregunta_09())
-
 def pregunta_10():
     res = []
 
